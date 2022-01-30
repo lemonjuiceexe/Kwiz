@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwiz</title>
+	
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+	
+	<script src="js/data.js" defer></script>
+	<script src="js/main.js" defer></script>
+</head>
+<body>
+	<div class="bar-time" id="bar-time">
+		<p id="time-label" class="select-none"></p>
+		<div id="time"></div>
+	</div>
+	<div id="container">
+        <div class="q" id="q">
+            <h2>To jest totalnie piękne pytanie</h2>
+		</div>
+		<div class="ans" onclick="ans('0')"> 
+            <p class="ansp select-none" id="ans-1">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="ans" onclick="ans('1')">
+            <p class="ansp select-none" id="ans-2">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="ans" onclick="ans('2')">
+            <p class="ansp select-none" id="ans-3">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="ans" onclick="ans('3')">
+            <p class="ansp select-none" id="ans-4">Lorem ipsum dolor sit amet.</p>
+        </div>
+	</div>
+    <div id="container-2"> 
+        <h1>Super świetny kwiz</h1>
+        <p class="start btn" onclick="startKwiz()">Rozpocznij</p>
+        <p class="credits btn" onclick="displayAuthors()">Autorzy</p>
+        <p class="exit btn" onclick="window.close()">Wyjdź</p>
+    </div>
+    <div id="container-3">
+        <h2>&copy;</h2>
+        <a class="authors" target="_blank" href="https://github.com/lemonjuiceexe">Franciszek Niwicki</a>
+        <a class="authors" target="_blank" href="https://github.com/Bruhtek">Bartosz Kasperski</a>
+        <p class="cancel btn" onclick="init()">Cofnij</p>
+    </div>
+	<div class="bar-score" id="bar-score">
+		<p id="correct-label" class="select-none">10</p>
+        <div id="score">
+            <div class="correct" id="correct-bar"></div>
+            <div class="incorrect" id="incorrect-bar"></div>
+        </div>
+        <p id="wrong-label" class="select-none">5</p>
+	</div>
+    <div id="container-4">
+        <h2>Gratulujemy!</h2>
+        <div class="wrapper">
+            <p>W naszym kwizie poszło ci </p>
+            <div class="words">
+                <span class="words-span"></span>
+                <span class="words-span" id="word1">gitowo</span>
+                <span class="words-span"></span>
+                <span class="words-span" id="word2">superaśnie</span>
+                <span class="words-span"></span>
+                <span class="words-span"></span>
+                <span class="words-span"></span>
+                <span class="words-span"></span>
+                <span class="words-span">WWWWWWWWWWWWWW</span>
+            </div>
+        </div>
+        
+        <p id="score-info">Zdobyłeś [tyle] na [ile] punktów!</p>
+        <p id="percent"></p>
+        <p class="btn" onclick="init()">Powrót do menu</p>
+    </div>
+</body>
+</html>
